@@ -1,9 +1,22 @@
+//Font
+@mixin title {
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+@mixin subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  @include break-point(tablet) {
+    font-size: 1.3rem;
+  }
+}
+
 //FLEX-BOX
-@mixin flex-col($valeur1, $valeur2) {
+@mixin flex-column($valeur1, $valeur2) {
   display: flex;
   flex-direction: column;
-  justify-content: $valeur2;
-  align-items: $valeur1;
+  justify-content: $valeur1;
+  align-items: $valeur2;
 }
 @mixin flex-row($valeur1, $valeur2) {
   display: flex;

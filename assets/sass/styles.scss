@@ -1,7 +1,18 @@
-@use "./partials/variables" as *;
-@use "./partials/normalize";
-@use "./partials/header";
+@import "./partials/normalize";
+@import "./partials/variables";
+@import "./partials/mixin";
+@import "./partials/header";
+@import "./partials/location";
+@import "./partials/discovery";
+@import "./partials/button";
 
 body {
-  background-color: $grey;
+  font-family: $font-text;
+}
+.container {
+  width: 100%;
+  @include flex-column(null, center);
+}
+main {
+  width: 100%;
 }

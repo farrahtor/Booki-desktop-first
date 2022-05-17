@@ -17,33 +17,59 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https : //fonts.googleapis.com/css2?family= famille= Roboto:wght@100;400;500;700;900 &famille = Shrikhand & display=swap"
+      href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&family=Shrikhand&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <div class="container">
       <!-- HEADER -->
-      <header>
+      <header id="header">
         <!-- LOGO -->
-        <div id="logo">
-          <a href="index.html">
-            <img src="assets/images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood" />
+        <div class="header-logo">
+          <a href="index.html" class="header-logo_link">
+            <img
+              src="assets/images/logo/ohmyfood@2x.svg"
+              alt="Logo Ohmyfood"
+              class="header-logo_img"
+            />
           </a>
-        </div>
-        <!-- LOCATION -->
-        <div id="location-insert">
-          <form id="location-insert_form">
-            <button type="submit">
-              <i class="fa-solid fa-location-dot"></i>
-            </button>
-            <input type="search" placeholder="Paris, Belleville" />
-          </form>
         </div>
       </header>
 
       <!-- MAIN -->
-      <main></main>
+      <main>
+        <!-- LOCATION -->
+        <div class="location-insert">
+          <form class="location-insert_form">
+            <button type="submit" class="location-insert_btn">
+              <i class="fa-solid fa-location-dot"></i>
+            </button>
+            <input
+              type="search"
+              placeholder="Paris, Belleville"
+              class="location-insert_input"
+            />
+          </form>
+        </div>
+        <!-- Section Decouverte -->
+        <section class="discovery">
+          <div class="discovery-bloc">
+            <h1 class="discovery-bloc-title">
+              Réservez le menu qui vous convient
+            </h1>
+            <p class="discovery-bloc-subtitle">
+              Découvrez des restaurants d'exception, séléctionnés par nos soins.
+            </p>
+          </div>
+          <a href="#" class="omf-btn">Explorer nos restaurants</a>
+        </section>
+      </main>
+      <footer></footer>
     </div>
   </body>
 </html>

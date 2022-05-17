@@ -45,7 +45,9 @@ footer,
 header,
 menu,
 nav,
-section {
+section,
+i,
+input {
   display: block;
 }
 
@@ -69,8 +71,123 @@ button {
   cursor: pointer;
 }
 
-body {
+.header-logo {
+  height: 63px;
+}
+.header-logo_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.header-logo_img {
+  height: 45%;
+}
+@media screen and (min-width: 768px) {
+  .header-logo {
+    height: 100px;
+  }
+}
+
+.location-insert {
+  height: 50px;
   background-color: #eaeaea;
+  box-shadow: inset 0em 0.15em 0.15em rgba(0, 0, 0, 0.132);
+}
+.location-insert_form {
+  width: 165px;
+  height: 70%;
+  margin: auto;
+  padding-top: 0.5em;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .location-insert_form {
+    width: 200px;
+  }
+}
+.location-insert_btn, .location-insert_input {
+  border: none;
+  background-color: #eaeaea;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .location-insert_btn, .location-insert_input {
+    font-size: 1rem;
+  }
+}
+.location-insert_input {
+  color: #353535;
+  width: 80%;
+}
+.location-insert_input::placeholder {
+  color: #353535;
+}
+
+.discovery {
+  height: 288px;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.discovery-bloc {
+  height: 110px;
+  text-align: center;
+  padding: 2.5em 2.1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .discovery-bloc {
+    height: 90px;
+  }
+}
+.discovery-bloc-title {
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+.discovery-bloc-subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #575757;
+}
+@media screen and (min-width: 768px) {
+  .discovery-bloc-subtitle {
+    font-size: 1.3rem;
+  }
+}
+
+.omf-btn {
+  border-radius: 50px;
+  background: linear-gradient(to left top, #9356dc, #ff79da);
+  color: white;
+  font-size: 1.1rem;
+  padding: 1em 1.2em;
+}
+@media screen and (min-width: 768px) {
+  .omf-btn {
+    font-size: 1.3rem;
+  }
+}
+
+body {
+  font-family: "Roboto", sans empattement;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */
