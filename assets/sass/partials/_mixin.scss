@@ -1,0 +1,25 @@
+//FLEX-BOX
+@mixin flex-col($valeur1, $valeur2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $valeur2;
+  align-items: $valeur1;
+}
+@mixin flex-row($valeur1, $valeur2) {
+  display: flex;
+  justify-content: $valeur1;
+  align-items: $valeur2;
+}
+
+//MEDIA QUERIES
+@mixin break-point($point) {
+  @if $point == desktop {
+    @media screen and (min-width: 1024px) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
+}
