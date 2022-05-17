@@ -1,0 +1,13 @@
+.header-logo {
+  height: 63px;
+  &_link {
+    @include flex-row(center, center);
+    height: 100%;
+  }
+  &_img {
+    height: 45%;
+  }
+  @include break-point(tablet) {
+    height: 100px;
+  }
+}
