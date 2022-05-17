@@ -1,0 +1,7 @@
+@use "./partials/variables" as *;
+@use "./partials/normalize";
+@use "./partials/header";
+
+body {
+  background-color: $grey;
+}
