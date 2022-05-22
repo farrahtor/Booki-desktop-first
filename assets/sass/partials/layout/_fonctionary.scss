@@ -7,7 +7,7 @@
   }
   @include break-point(desktop) {
     height: 200px;
-    margin-top: 20px;
+    margin-top: 50px;
   }
 
   &-title {
@@ -18,7 +18,7 @@
     height: 300px;
     @include flex-column(space-around, flex-start);
     @include break-point(desktop) {
-      width: 95%;
+      width: 88%;
       height: 150px;
       margin: auto;
       @include flex-row(space-between, center);
@@ -29,10 +29,10 @@
 
 .fonctionary-card {
   &-link {
-    width: 80%;
+    width: 85%;
     margin: auto;
     background-color: $light-grey;
-    box-shadow: 0px 5px 5px rgba(118, 118, 118, 0.2);
+    box-shadow: $shadow;
     border-radius: 15px;
     @include flex-row(center, center);
     position: relative;
@@ -59,12 +59,12 @@
     height: 75px;
     & i {
       font-size: 1.2rem;
-      padding-left: 2em;
+      padding-left: 1em;
       color: #818181;
       flex: 0.8;
     }
     & p {
-      @include subtitle;
+      font-size: 1.1rem;
       font-weight: 600;
       flex: 3;
     }

@@ -204,7 +204,7 @@ button {
 @media screen and (min-width: 1024px) {
   .fonctionary {
     height: 200px;
-    margin-top: 20px;
+    margin-top: 50px;
   }
 }
 .fonctionary-title {
@@ -227,7 +227,7 @@ button {
 }
 @media screen and (min-width: 1024px) {
   .fonctionary-cards {
-    width: 95%;
+    width: 88%;
     height: 150px;
     margin: auto;
     display: flex;
@@ -239,7 +239,7 @@ button {
 }
 
 .fonctionary-card-link {
-  width: 80%;
+  width: 85%;
   margin: auto;
   background-color: #f6f6f6;
   box-shadow: 0px 5px 5px rgba(118, 118, 118, 0.2);
@@ -280,22 +280,30 @@ button {
 }
 .fonctionary-card-text i {
   font-size: 1.2rem;
-  padding-left: 2em;
+  padding-left: 1em;
   color: #818181;
   flex: 0.8;
 }
 .fonctionary-card-text p {
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 1.1rem;
   font-weight: 600;
   flex: 3;
 }
-@media screen and (min-width: 768px) {
-  .fonctionary-card-text p {
-    font-size: 1.2rem;
+
+.restaurants {
+  height: 1230px;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants {
+    height: 700px;
+    padding-top: 3em;
   }
 }
-
 .restaurants-title {
   font-size: 1.5rem;
   font-weight: 900;
@@ -305,6 +313,78 @@ button {
   .restaurants-title {
     font-size: 2rem;
   }
+}
+.restaurants-bloc {
+  width: 100%;
+  height: 1110px;
+  padding: 1em 0;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants-bloc {
+    height: 550px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 40px;
+  }
+}
+
+.restaurant-card {
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+@media screen and (min-width: 1024px) {
+  .restaurant-card {
+    width: 47%;
+  }
+}
+.restaurant-card-new {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  color: #2da185;
+  background-color: #99e2d0;
+}
+.restaurant-card-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 255px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 5px rgba(118, 118, 118, 0.2);
+}
+.restaurant-card-picture img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+.restaurant-card-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1em;
+}
+.restaurant-card-title h3 {
+  font-size: 1.3rem;
+  font-weight: 900;
+  padding-bottom: 4%;
+}
+.restaurant-card-title p {
+  font-size: 1.1rem;
+}
+.restaurant-card-title-ico {
+  font-size: 1.7rem;
+  padding-right: 3%;
 }
 
 body {
