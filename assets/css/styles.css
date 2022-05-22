@@ -71,6 +71,24 @@ button {
   cursor: pointer;
 }
 
+.omf-btn {
+  font-size: 1rem;
+  padding: 1em 1.2em;
+  color: white;
+  border-radius: 50px;
+  background: linear-gradient(to left top, #9356dc, #ff79da);
+  box-shadow: 0px 5px 5px rgba(118, 118, 118, 0.3);
+}
+@media screen and (min-width: 768px) {
+  .omf-btn {
+    font-size: 1.3rem;
+  }
+}
+.omf-btn:hover {
+  box-shadow: 0px 5px 5px rgba(118, 118, 118, 0.6);
+  background: linear-gradient(to left top, #a16be0, #ff93e1);
+}
+
 .header-logo {
   height: 63px;
 }
@@ -168,24 +186,6 @@ button {
   .discovery-bloc-subtitle {
     font-size: 1.2rem;
   }
-}
-
-.omf-btn {
-  font-size: 1rem;
-  padding: 1em 1.2em;
-  color: white;
-  border-radius: 50px;
-  background: linear-gradient(to left top, #9356dc, #ff79da);
-  box-shadow: 0px 5px 5px rgba(118, 118, 118, 0.3);
-}
-@media screen and (min-width: 768px) {
-  .omf-btn {
-    font-size: 1.3rem;
-  }
-}
-.omf-btn:hover {
-  box-shadow: 0px 5px 5px rgba(118, 118, 118, 0.6);
-  background: linear-gradient(to left top, #a16be0, #ff93e1);
 }
 
 .fonctionary {
@@ -293,6 +293,17 @@ button {
 @media screen and (min-width: 768px) {
   .fonctionary-card-text p {
     font-size: 1.2rem;
+  }
+}
+
+.restaurants-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  padding: 0 20px;
+}
+@media screen and (min-width: 768px) {
+  .restaurants-title {
+    font-size: 2rem;
   }
 }
 
