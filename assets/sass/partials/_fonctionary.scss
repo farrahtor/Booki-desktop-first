@@ -1,0 +1,72 @@
+.fonctionary {
+  width: 100%;
+  height: 440px;
+  @include flex-column(space-evenly, flex-start);
+  @include break-point(tablet) {
+    align-items: center;
+  }
+  @include break-point(desktop) {
+    height: 200px;
+    margin-top: 20px;
+  }
+
+  &-title {
+    @include title;
+  }
+  &-cards {
+    width: 100%;
+    height: 300px;
+    @include flex-column(space-around, flex-start);
+    @include break-point(desktop) {
+      width: 95%;
+      height: 150px;
+      margin: auto;
+      @include flex-row(space-between, center);
+      gap: 40px;
+    }
+  }
+}
+
+.fonctionary-card {
+  &-link {
+    width: 80%;
+    margin: auto;
+    background-color: $light-grey;
+    box-shadow: 0px 5px 5px rgba(118, 118, 118, 0.2);
+    border-radius: 15px;
+    @include flex-row(center, center);
+    position: relative;
+    &:hover {
+      background-color: lighten($color-primary, 35);
+    }
+    @include break-point(tablet) {
+      width: 45%;
+    }
+  }
+  &-nbr {
+    @include flex-row(center, center);
+    position: absolute;
+    left: -15px;
+    width: 25px;
+    height: 25px;
+    color: white;
+    background-color: $color-primary;
+    border-radius: 50px;
+  }
+  &-text {
+    @include flex-row(null, center);
+    width: 90%;
+    height: 75px;
+    & i {
+      font-size: 1.2rem;
+      padding-left: 2em;
+      color: #818181;
+      flex: 0.8;
+    }
+    & p {
+      @include subtitle;
+      font-weight: 600;
+      flex: 3;
+    }
+  }
+}
