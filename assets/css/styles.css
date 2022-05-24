@@ -383,8 +383,25 @@ button {
   font-size: 1.1rem;
 }
 .restaurant-card-title-ico {
+  position: relative;
+}
+.restaurant-card-title-ico .fa-heart {
   font-size: 1.7rem;
   padding-right: 3%;
+  position: absolute;
+  top: 0px;
+  right: 15px;
+}
+.restaurant-card-title-ico .fa-heart_filled {
+  opacity: 0;
+  background: linear-gradient(to left top, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurant-card-title-ico .fa-heart_filled:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 
 .footer {
