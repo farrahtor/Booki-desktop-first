@@ -1,0 +1,21 @@
+.favorites {
+  position: relative;
+  &-heart {
+    font-size: 1.7rem;
+    padding-right: 3%;
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    &_filled {
+      opacity: 0;
+      background: $degraded;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      &:hover {
+        opacity: 1;
+        transform: scale(1.1);
+        transition: 0.5s;
+      }
+    }
+  }
+}

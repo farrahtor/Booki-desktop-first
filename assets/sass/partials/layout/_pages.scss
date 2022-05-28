@@ -1,0 +1,107 @@
+.picture {
+  width: 100%;
+  height: 260px;
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.card {
+  @include flex-column(space-evenly, center);
+  width: 100%;
+  height: 1160px;
+  margin-top: -40px;
+  background-color: $light-grey;
+  border-radius: 40px 40px 0 0;
+
+  &-title {
+    @include flex-row(space-between, null);
+    width: 100%;
+    padding: 2em;
+
+    & h1 {
+      @include pages-title;
+      padding: 0 0.8em;
+    }
+    & .favorites {
+      margin-right: 20px;
+    }
+  }
+  &-menu {
+    @include flex-column(space-evenly, center);
+    width: 100%;
+    height: 950px;
+  }
+  &-btn {
+    @include flex-row(center, flex-start);
+    width: 50%;
+    height: 100px;
+  }
+}
+// Carte Restaurant
+.menu-items {
+  @include flex-column(space-between, flex-start);
+  width: 353px;
+  height: 375px;
+  padding-bottom: 3em;
+
+  &-title {
+    text-transform: uppercase;
+    padding: 0 10px;
+    @include subtitle;
+    &::after {
+      display: block;
+      content: "";
+      border-bottom: 3px solid $color-tertiary;
+      width: 40px;
+      padding-top: 5px;
+    }
+  }
+  &-choice {
+    @include flex-row(space-evenly, center);
+    width: 100%;
+    height: 65px;
+    background-color: #fff;
+    box-shadow: $shadow;
+    border-radius: 15px;
+    // Position initial
+    position: relative;
+    overflow: hidden;
+
+    // border: 1px solid green;
+
+    &--text {
+      width: 75%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      & h3 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        padding-bottom: 0.5em;
+      }
+      & p {
+        font-size: 0.9rem;
+      }
+
+      // border: 1px solid blueviolet;
+    }
+    &--price {
+      // width: 10%;
+      font-weight: 700;
+      align-self: flex-end;
+      padding-bottom: 10px;
+      // border: 1px solid rgb(141, 92, 0);
+    }
+    &--check {
+      @include flex-row(center, center);
+      width: 60px;
+      height: 100%;
+      position: absolute;
+      right: -62px;
+      background-color: $color-tertiary;
+      border-radius: 0 15px 15px 0;
+    }
+  }
+}

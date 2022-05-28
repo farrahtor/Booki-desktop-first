@@ -2,20 +2,23 @@
 @import "./partials/utils/variables";
 @import "./partials/utils/mixin";
 @import "./partials/components/button";
+@import "./partials/components/favorites";
 @import "./partials/layout/header";
 @import "./partials/layout/location";
 @import "./partials/layout/discovery";
 @import "./partials/layout/fonctionary";
 @import "./partials/layout/restaurants";
 @import "./partials/layout/footer";
+@import "./partials/layout/pages";
 
 body {
   font-family: $font-text;
 }
-.container {
+#container {
   width: 100%;
-  @include flex-column(null, center);
+  @include flex-column(space-between, center);
 }
-main {
+#main {
   width: 100%;
+  @include flex-column(space-between, center);
 }

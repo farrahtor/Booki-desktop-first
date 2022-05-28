@@ -14,6 +14,10 @@
     font-size: 1.2rem;
   }
 }
+@mixin pages-title {
+  font-family: $font-title;
+  font-size: 1.7rem;
+}
 
 //FLEX-BOX
 @mixin flex-column($valeur1, $valeur2) {
