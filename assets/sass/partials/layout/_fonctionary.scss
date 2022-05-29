@@ -1,7 +1,11 @@
 .fonctionary {
+  @include flex-column(null, null);
   width: 100%;
-  height: 440px;
-  @include flex-column(space-evenly, flex-start);
+  margin: 3em;
+  &-title {
+    @include title;
+  }
+  // responsive
   @include break-point(tablet) {
     align-items: center;
   }
@@ -10,18 +14,17 @@
     margin-top: 50px;
   }
 
-  &-title {
-    @include title;
-  }
   &-cards {
-    width: 100%;
-    height: 300px;
-    @include flex-column(space-around, flex-start);
+    @include flex-column(null, null);
+    gap: 1.5em;
+    margin: 2em 1em 1em 2.1em;
+
     @include break-point(desktop) {
+      @include flex-row(space-between, center);
       width: 88%;
       height: 150px;
       margin: auto;
-      @include flex-row(space-between, center);
+
       gap: 40px;
     }
   }
@@ -29,12 +32,10 @@
 
 .fonctionary-card {
   &-link {
-    width: 85%;
-    margin: auto;
     background-color: $light-grey;
     box-shadow: $shadow;
     border-radius: 15px;
-    @include flex-row(center, center);
+    @include flex-row(null, center);
     position: relative;
     &:hover {
       background-color: lighten($color-primary, 35);
@@ -45,28 +46,27 @@
   }
   &-nbr {
     @include flex-row(center, center);
+    background-color: $color-primary;
+    border-radius: 50px;
+    color: white;
+    // Position
     position: absolute;
     left: -15px;
     width: 25px;
     height: 25px;
-    color: white;
-    background-color: $color-primary;
-    border-radius: 50px;
   }
   &-text {
-    @include flex-row(null, center);
-    width: 90%;
-    height: 75px;
+    @include flex-row(null, null);
+    padding: 1.3em 0.5em;
+    white-space: nowrap;
     & i {
       font-size: 1.2rem;
-      padding-left: 1em;
+      padding: 0 1.5em;
       color: #818181;
-      flex: 0.8;
     }
     & p {
       font-size: 1.1rem;
       font-weight: 600;
-      flex: 3;
     }
   }
 }

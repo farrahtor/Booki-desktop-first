@@ -1,15 +1,12 @@
 .header-logo {
-  height: 65px;
   @include flex-row(center, center);
+  margin: 1em;
 
-  &-link {
-    @include flex-row(center, center);
-    height: 100%;
-  }
+  // Logo omf
   &-img {
-    height: 45%;
+    height: 30px;
   }
-
+  // fleche retour pages
   &_arrow {
     position: absolute;
     & i {
@@ -19,6 +16,7 @@
       font-size: 1.5rem;
     }
   }
+  // responsive tablette
   @include break-point(tablet) {
     height: 100px;
   }

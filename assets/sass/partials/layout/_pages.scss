@@ -55,12 +55,8 @@
     }
   }
   &-btn {
-    align-self: center;
-    @include flex-row(center, center);
     width: 45%;
     height: 80px;
-    margin-bottom: 4em;
-    animation: slideUp 3s ease-in-out;
   }
 }
 

@@ -1,18 +1,23 @@
 .omf-btn {
-  width: 100%;
-  font-size: 1rem;
-  text-align: center;
-  padding: 1em 1.2em;
-  color: white;
-  border-radius: 50px;
-  background: $degraded;
-  box-shadow: 0px 5px 5px rgba(118, 118, 118, 0.3);
+  @include flex-row(center, center);
+  align-self: center;
+  margin-bottom: 3em;
+  &-link {
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    padding: 1em 1.4em;
+    color: white;
+    border-radius: 50px;
+    background: $degraded;
+    box-shadow: 0px 5px 5px rgba(118, 118, 118, 0.3);
 
-  @include break-point(tablet) {
-    font-size: 1.3rem;
-  }
-  &:hover {
-    box-shadow: 0px 5px 5px rgba(118, 118, 118, 0.6);
-    background: $light-degraded;
+    @include break-point(tablet) {
+      font-size: 1.3rem;
+    }
+    &:hover {
+      box-shadow: 0px 5px 5px rgba(118, 118, 118, 0.6);
+      background: $light-degraded;
+    }
   }
 }

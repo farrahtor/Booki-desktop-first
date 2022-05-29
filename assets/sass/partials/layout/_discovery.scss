@@ -1,16 +1,14 @@
 .discovery {
+  @include flex-column(null, null);
   width: 100%;
-  height: 288px;
+  padding: 1em;
   background-color: $light-grey;
-  @include flex-column(null, center);
-  &-bloc {
-    height: 110px;
+
+  &-text {
+    @include flex-column(space-evenly, null);
+    height: 120px;
     text-align: center;
-    padding: 2.5em 2.1em;
-    @include flex-column(space-between, center);
-    @include break-point(tablet) {
-      height: 90px;
-    }
+    margin: 1em 2.1em;
 
     &-title {
       @include title;
@@ -18,6 +16,11 @@
     &-subtitle {
       @include subtitle;
       color: #575757;
+    }
+
+    // tablette
+    @include break-point(tablet) {
+      height: 90px;
     }
   }
 }

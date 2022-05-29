@@ -1,20 +1,22 @@
 .restaurants {
-  width: 100%;
-  height: 1230px;
-  background-color: $light-grey;
   @include flex-column(center, flex-start);
+  width: 100%;
+  padding: 2em;
+  background-color: $light-grey;
+  // responsive
   @include break-point(desktop) {
     height: 700px;
     padding-top: 3em;
   }
   &-title {
     @include title;
+    padding: 1em;
   }
   &-bloc {
-    width: 100%;
-    height: 1110px;
-    padding: 1em 0;
     @include flex-column(null, null);
+    width: 100%;
+    gap: 0.5em;
+    // responsive
     @include break-point(desktop) {
       height: 550px;
       width: 90%;
@@ -27,16 +29,16 @@
   }
 }
 .restaurant-card {
-  width: 90%;
-  margin: auto;
+  padding: 0.5em 1.1em;
   position: relative;
+  // responsive
   @include break-point(desktop) {
     width: 47%;
   }
   &-new {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 25px;
+    right: 30px;
     font-size: 1rem;
     font-weight: 600;
     padding: 0.5em 1em;
@@ -46,7 +48,7 @@
   &-link {
     @include flex-column(space-between, null);
     height: 255px;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: $shadow;
     background-color: #fff;
     // @include break-point(desktop) {
@@ -63,12 +65,15 @@
   }
 
   &-title {
-    @include flex-row(space-between, flex-start);
+    @include flex-row(space-between, null);
     padding: 1em;
+    &-text {
+      @include flex-column(null, null);
+      gap: 0.5em;
+    }
     & h3 {
       font-size: 1.3rem;
       font-weight: 900;
-      padding-bottom: 4%;
     }
     & p {
       font-size: 1.1rem;
