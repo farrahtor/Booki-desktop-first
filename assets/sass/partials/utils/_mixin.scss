@@ -17,6 +17,11 @@
 @mixin pages-title {
   font-family: $font-title;
   font-size: 1.7rem;
+  padding: 0 0.8em;
+  @include break-point(tablet) {
+    font-size: 2rem;
+    margin-right: 4em;
+  }
 }
 
 //FLEX-BOX

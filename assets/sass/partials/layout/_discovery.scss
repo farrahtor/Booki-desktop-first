@@ -1,4 +1,5 @@
 .discovery {
+  width: 100%;
   height: 288px;
   background-color: $light-grey;
   @include flex-column(null, center);
