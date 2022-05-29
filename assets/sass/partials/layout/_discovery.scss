@@ -1,11 +1,12 @@
 .discovery {
-  @include flex-column(null, null);
+  @include flex-column;
   width: 100%;
-  padding: 1em;
+  padding: 1em 0;
   background-color: $light-grey;
 
   &-text {
-    @include flex-column(space-evenly, null);
+    @include flex-column;
+    justify-content: space-evenly;
     height: 120px;
     text-align: center;
     margin: 1em 2.1em;

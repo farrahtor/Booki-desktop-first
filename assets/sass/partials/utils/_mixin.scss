@@ -25,17 +25,18 @@
 }
 
 //FLEX-BOX
-@mixin flex-column($valeur1, $valeur2) {
+@mixin flex-column {
   display: flex;
   flex-direction: column;
-  justify-content: $valeur1;
-  align-items: $valeur2;
 }
-@mixin flex-row($valeur1, $valeur2) {
+@mixin flex-row {
   display: flex;
   flex-direction: row;
-  justify-content: $valeur1;
-  align-items: $valeur2;
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 //MEDIA QUERIES

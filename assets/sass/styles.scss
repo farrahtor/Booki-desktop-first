@@ -14,11 +14,8 @@
 body {
   font-family: $font-text;
 }
-#container {
-  width: 100%;
-  @include flex-column(space-between, center);
-}
+#container,
 #main {
   width: 100%;
-  @include flex-column(space-between, center);
+  @include flex-column;
 }

@@ -10,14 +10,20 @@
   }
   &-items {
     height: 100px;
-    @include flex-column(space-between, flex-start);
+    @include flex-column;
+    justify-content: space-between;
+    align-items: flex-start;
     padding-left: 1.5em;
     @include break-point(tablet) {
       width: 80%;
-      @include flex-row(space-between, center);
+      @include flex-row;
+      justify-content: space-between;
+      align-items: center;
     }
     &-link {
-      @include flex-row(space-between, flex-start);
+      @include flex-row;
+      justify-content: space-between;
+      align-items: flex-start;
       width: 65%;
       color: #fff;
       @include break-point(tablet) {

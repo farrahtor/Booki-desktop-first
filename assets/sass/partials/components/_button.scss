@@ -1,5 +1,5 @@
 .omf-btn {
-  @include flex-row(center, center);
+  @include flex-center;
   align-self: center;
   margin-bottom: 3em;
   &-link {

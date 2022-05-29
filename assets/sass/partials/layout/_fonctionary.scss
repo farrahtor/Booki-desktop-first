@@ -1,7 +1,6 @@
 .fonctionary {
-  @include flex-column(null, null);
-  width: 100%;
-  margin: 3em;
+  @include flex-column;
+  margin: 3em 0;
   &-title {
     @include title;
   }
@@ -15,12 +14,14 @@
   }
 
   &-cards {
-    @include flex-column(null, null);
+    @include flex-column;
     gap: 1.5em;
     margin: 2em 1em 1em 2.1em;
 
     @include break-point(desktop) {
-      @include flex-row(space-between, center);
+      @include flex-row;
+      justify-content: space-between;
+      align-items: center;
       width: 88%;
       height: 150px;
       margin: auto;
@@ -35,7 +36,8 @@
     background-color: $light-grey;
     box-shadow: $shadow;
     border-radius: 15px;
-    @include flex-row(null, center);
+    @include flex-row;
+    align-items: center;
     position: relative;
     &:hover {
       background-color: lighten($color-primary, 35);
@@ -45,7 +47,7 @@
     }
   }
   &-nbr {
-    @include flex-row(center, center);
+    @include flex-center;
     background-color: $color-primary;
     border-radius: 50px;
     color: white;
@@ -56,7 +58,7 @@
     height: 25px;
   }
   &-text {
-    @include flex-row(null, null);
+    @include flex-row;
     padding: 1.3em 0.5em;
     white-space: nowrap;
     & i {

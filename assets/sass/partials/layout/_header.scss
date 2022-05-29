@@ -1,5 +1,5 @@
 .header-logo {
-  @include flex-row(center, center);
+  @include flex-center;
   margin: 1em;
 
   // Logo omf
@@ -16,7 +16,7 @@
       font-size: 1.5rem;
     }
   }
-  // responsive tablette
+  // responsive
   @include break-point(tablet) {
     height: 100px;
   }

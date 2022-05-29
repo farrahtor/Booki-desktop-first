@@ -11,7 +11,7 @@
   }
 }
 .card {
-  @include flex-column(null, null);
+  @include flex-column;
   gap: 2em;
   width: 100%;
   max-height: max-content;
@@ -25,7 +25,8 @@
   // }
 
   &-title {
-    @include flex-row(space-between, null);
+    @include flex-row;
+    justify-content: space-between;
     width: 100%;
     margin-top: 2.5em;
     // @include break-point(tablet) {
@@ -40,7 +41,8 @@
     }
   }
   &-menu {
-    @include flex-column(space-between, null);
+    @include flex-column;
+    justify-content: space-between;
     gap: 2em;
     @include break-point(tablet) {
       // width: 80%;
@@ -62,7 +64,7 @@
 
 // Items Restaurant
 .menu-items {
-  @include flex-column(null, null);
+  @include flex-column;
 
   &-title {
     text-transform: uppercase;
@@ -79,7 +81,9 @@
   }
   // Carte Choix
   &-choice {
-    @include flex-row(space-between, center);
+    @include flex-row;
+    justify-content: space-between;
+    align-items: center;
     height: 65px;
     margin: 0.5em 0.8em;
     background-color: #fff;
@@ -119,7 +123,7 @@
       transition: all 0.4s ease-in-out;
     }
     &--check {
-      @include flex-row(center, center);
+      @include flex-center;
       width: 60px;
       height: 100%;
       position: absolute;
