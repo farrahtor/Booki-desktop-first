@@ -1,6 +1,7 @@
 .picture {
   width: 100%;
   height: 260px;
+  // responsive
   @include break-point(desktop) {
     height: 400px;
   }
@@ -18,42 +19,48 @@
   margin-top: -40px;
   background-color: $light-grey;
   border-radius: 40px 40px 0 0;
-  // @include break-point(desktop) {
-  //   max-height: 600px;
-  //   max-width: 1024px;
-  //   margin: auto;
-  // }
 
   &-title {
     @include flex-row;
     justify-content: space-between;
     width: 100%;
     margin-top: 2.5em;
-    // @include break-point(tablet) {
-    //   @include flex-row(center, null);
-    // }
+
+    // responsive
+    @include break-point(tablet) {
+      padding-left: 2.6em;
+      margin-top: 3.5em;
+    }
+    @include break-point(desktop) {
+      padding-left: 11.6em;
+    }
 
     & h1 {
       @include pages-title;
     }
     & .favorites {
-      margin-right: 20px;
+      margin-right: 1.5em;
+      // responsive
+      @include break-point(tablet) {
+        margin-right: 7em;
+      }
+      @include break-point(desktop) {
+        margin-right: 26em;
+      }
     }
   }
   &-menu {
     @include flex-column;
     justify-content: space-between;
     gap: 2em;
+
+    // responsive
     @include break-point(tablet) {
-      // width: 80%;
+      padding: 0 3em;
     }
     @include break-point(desktop) {
-      // max-width: 1024px;
-      // max-height: 350px;
-      // @include flex-row(space-evenly, center);
-
-      // margin: auto;
-      // gap: 2em;
+      padding: 0 12em;
+      margin: 2em 0;
     }
   }
   &-btn {
@@ -97,8 +104,8 @@
     &--text {
       width: 245px;
       padding: 0 0.7em;
+      white-space: nowrap;
 
-      transition: $transition;
       & h3 {
         font-size: 1.1rem;
         font-weight: 700;
@@ -106,12 +113,20 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        // responsive
+        @include break-point(tablet) {
+          overflow: visible;
+        }
       }
       & p {
         font-size: 0.9rem;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        // responsive
+        @include break-point(tablet) {
+          overflow: visible;
+        }
       }
     }
     &--price {
@@ -119,7 +134,10 @@
       font-weight: 700;
       align-self: flex-end;
       padding-bottom: 10px;
-
+      // responsive
+      @include break-point(desktop) {
+        margin-right: 2.5em;
+      }
       transition: all 0.4s ease-in-out;
     }
     &--check {
@@ -127,11 +145,16 @@
       width: 60px;
       height: 100%;
       position: absolute;
-      right: -62px;
+      right: -60px;
       color: #fff;
       font-size: 1.3rem;
       background-color: $color-tertiary;
       border-radius: 0 15px 15px 0;
+      // responsive
+      @include break-point(tablet) {
+        width: 120px;
+        right: -120px;
+      }
 
       transition: all 0.4s ease-in-out;
     }
@@ -140,9 +163,17 @@
     }
     &:hover &--price {
       transform: translateX(-60px);
+      // responsive
+      @include break-point(tablet) {
+        transform: translateX(-180px);
+      }
     }
     &:hover &--check {
       transform: translateX(-60px);
+      // responsive
+      @include break-point(tablet) {
+        transform: translateX(-120px);
+      }
     }
   }
 

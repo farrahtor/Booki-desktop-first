@@ -1,38 +1,34 @@
 .restaurants {
   @include flex-column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  padding: 2em 0;
+  padding: 2em 1em;
   background-color: $light-grey;
+
   // responsive
+  @include break-point(tablet) {
+    padding: 4em;
+  }
   @include break-point(desktop) {
     height: 700px;
     padding-top: 3em;
   }
   &-title {
     @include title;
-    padding: 1em;
+    padding-bottom: 1em;
   }
   &-bloc {
     @include flex-column;
-    width: 100%;
-    gap: 0.5em;
+    gap: 1.5em;
     padding-bottom: 2em;
     // responsive
     @include break-point(desktop) {
-      height: 550px;
-      width: 90%;
       margin: auto;
       @include flex-row;
-
       flex-wrap: wrap;
-      row-gap: 40px;
+      gap: 3em;
     }
   }
 }
 .restaurant-card {
-  padding: 0.5em 1.1em;
   position: relative;
   // responsive
   @include break-point(desktop) {
@@ -55,8 +51,6 @@
     border-radius: 20px;
     box-shadow: $shadow;
     background-color: #fff;
-    // @include break-point(desktop) {
-    //   @include flex-row(space-between, center);
   }
 
   &-picture {

@@ -2,7 +2,6 @@
 @mixin title {
   font-size: 1.5rem;
   font-weight: 900;
-  padding: 0 20px;
   @include break-point(tablet) {
     font-size: 2rem;
   }

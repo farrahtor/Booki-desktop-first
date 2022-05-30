@@ -1,49 +1,41 @@
 .fonctionary {
   @include flex-column;
-  margin: 3em 0;
+  margin: 3em 1em;
   &-title {
     @include title;
+    padding-bottom: 1em;
   }
   // responsive
   @include break-point(tablet) {
-    align-items: center;
+    margin: 4em;
   }
-  @include break-point(desktop) {
-    height: 200px;
-    margin-top: 50px;
-  }
-
   &-cards {
     @include flex-column;
     gap: 1.5em;
-    margin: 2em 1em 1em 2.1em;
+    margin-left: 1em;
 
+    // responsive
+    @include break-point(tablet) {
+      margin: 1em 0;
+    }
     @include break-point(desktop) {
       @include flex-row;
-      justify-content: space-between;
-      align-items: center;
-      width: 88%;
-      height: 150px;
-      margin: auto;
-
-      gap: 40px;
+      justify-content: space-evenly;
     }
   }
 }
 
 .fonctionary-card {
   &-link {
+    @include flex-row;
     background-color: $light-grey;
     box-shadow: $shadow;
     border-radius: 15px;
-    @include flex-row;
+
     align-items: center;
     position: relative;
     &:hover {
       background-color: lighten($color-primary, 35);
-    }
-    @include break-point(tablet) {
-      width: 45%;
     }
   }
   &-nbr {
@@ -59,12 +51,20 @@
   }
   &-text {
     @include flex-row;
-    padding: 1.3em 0.5em;
+    padding: 1.3em 2em;
     white-space: nowrap;
+    // Responsive
+    @include break-point(desktop) {
+      padding: 1.5em;
+    }
     & i {
       font-size: 1.2rem;
-      padding: 0 1.5em;
+      padding-right: 1.5em;
       color: #818181;
+      // Responsive
+      @include break-point(desktop) {
+        padding-right: 1em;
+      }
     }
     & p {
       font-size: 1.1rem;

@@ -120,6 +120,9 @@ button {
   transition: 0.5s;
 }
 
+.header {
+  position: relative;
+}
 .header-logo {
   display: flex;
   justify-content: center;
@@ -129,53 +132,60 @@ button {
 .header-logo-img {
   height: 30px;
 }
-.header-logo_arrow {
-  position: absolute;
+@media screen and (min-width: 768px) {
+  .header-logo-img {
+    height: 40px;
+  }
 }
-.header-logo_arrow i {
-  position: relative;
-  top: -1px;
-  left: -155px;
-  font-size: 1.5rem;
+.header-arrow {
+  position: absolute;
+  top: 0em;
+  left: 1.5em;
 }
 @media screen and (min-width: 768px) {
-  .header-logo {
-    height: 100px;
+  .header-arrow {
+    left: 4.5em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header-arrow {
+    left: 13.5em;
+  }
+}
+.header-arrow i {
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 768px) {
+  .header-arrow i {
+    font-size: 2rem;
   }
 }
 
 .location-insert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 50px;
+  padding-left: 1.8em;
   background-color: #eaeaea;
   box-shadow: inset 0em 0.15em 0.15em rgba(0, 0, 0, 0.132);
 }
 .location-insert-form {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 188px;
-  margin: 1em auto;
-}
-@media screen and (min-width: 768px) {
-  .location-insert-form {
-    width: 200px;
-  }
+  max-width: 240px;
+  margin: 1em 0;
 }
 .location-insert-btn, .location-insert-input {
   border: none;
   background-color: #eaeaea;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
-}
-@media screen and (min-width: 768px) {
-  .location-insert-btn, .location-insert-input {
-    font-size: 1rem;
-  }
+  padding-right: 1em;
 }
 .location-insert-input {
+  width: 100%;
   color: #353535;
-  width: 80%;
 }
 .location-insert-input::placeholder {
   color: #353535;
@@ -199,7 +209,6 @@ button {
 .discovery-text-title {
   font-size: 1.5rem;
   font-weight: 900;
-  padding: 0 20px;
 }
 @media screen and (min-width: 768px) {
   .discovery-text-title {
@@ -225,12 +234,12 @@ button {
 .fonctionary {
   display: flex;
   flex-direction: column;
-  margin: 3em 0;
+  margin: 3em 1em;
 }
 .fonctionary-title {
   font-size: 1.5rem;
   font-weight: 900;
-  padding: 0 20px;
+  padding-bottom: 1em;
 }
 @media screen and (min-width: 768px) {
   .fonctionary-title {
@@ -239,50 +248,39 @@ button {
 }
 @media screen and (min-width: 768px) {
   .fonctionary {
-    align-items: center;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .fonctionary {
-    height: 200px;
-    margin-top: 50px;
+    margin: 4em;
   }
 }
 .fonctionary-cards {
   display: flex;
   flex-direction: column;
   gap: 1.5em;
-  margin: 2em 1em 1em 2.1em;
+  margin-left: 1em;
+}
+@media screen and (min-width: 768px) {
+  .fonctionary-cards {
+    margin: 1em 0;
+  }
 }
 @media screen and (min-width: 1024px) {
   .fonctionary-cards {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 88%;
-    height: 150px;
-    margin: auto;
-    gap: 40px;
+    justify-content: space-evenly;
   }
 }
 
 .fonctionary-card-link {
+  display: flex;
+  flex-direction: row;
   background-color: #f6f6f6;
   box-shadow: 0px 5px 5px rgba(118, 118, 118, 0.2);
   border-radius: 15px;
-  display: flex;
-  flex-direction: row;
   align-items: center;
   position: relative;
 }
 .fonctionary-card-link:hover {
   background-color: #f2eafb;
-}
-@media screen and (min-width: 768px) {
-  .fonctionary-card-link {
-    width: 45%;
-  }
 }
 .fonctionary-card-nbr {
   display: flex;
@@ -299,13 +297,23 @@ button {
 .fonctionary-card-text {
   display: flex;
   flex-direction: row;
-  padding: 1.3em 0.5em;
+  padding: 1.3em 2em;
   white-space: nowrap;
+}
+@media screen and (min-width: 1024px) {
+  .fonctionary-card-text {
+    padding: 1.5em;
+  }
 }
 .fonctionary-card-text i {
   font-size: 1.2rem;
-  padding: 0 1.5em;
+  padding-right: 1.5em;
   color: #818181;
+}
+@media screen and (min-width: 1024px) {
+  .fonctionary-card-text i {
+    padding-right: 1em;
+  }
 }
 .fonctionary-card-text p {
   font-size: 1.1rem;
@@ -315,11 +323,13 @@ button {
 .restaurants {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  padding: 2em 0;
+  padding: 2em 1em;
   background-color: #f6f6f6;
+}
+@media screen and (min-width: 768px) {
+  .restaurants {
+    padding: 4em;
+  }
 }
 @media screen and (min-width: 1024px) {
   .restaurants {
@@ -330,8 +340,7 @@ button {
 .restaurants-title {
   font-size: 1.5rem;
   font-weight: 900;
-  padding: 0 20px;
-  padding: 1em;
+  padding-bottom: 1em;
 }
 @media screen and (min-width: 768px) {
   .restaurants-title {
@@ -341,24 +350,20 @@ button {
 .restaurants-bloc {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  gap: 0.5em;
+  gap: 1.5em;
   padding-bottom: 2em;
 }
 @media screen and (min-width: 1024px) {
   .restaurants-bloc {
-    height: 550px;
-    width: 90%;
     margin: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    row-gap: 40px;
+    gap: 3em;
   }
 }
 
 .restaurant-card {
-  padding: 0.5em 1.1em;
   position: relative;
 }
 @media screen and (min-width: 1024px) {
@@ -411,53 +416,60 @@ button {
 }
 
 .footer {
-  width: 100%;
-  height: 197px;
+  display: flex;
+  flex-direction: column;
+  padding: 2em 1.5em;
   background-color: #353535;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 2.5em 4.5em;
+  }
 }
 .footer h3 {
   font-family: "Shrikhand", cursive;
   color: #fff;
   font-size: 1.2rem;
-  padding: 1.5em;
 }
 .footer-items {
-  height: 100px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-left: 1.5em;
+  margin-top: 1.5em;
 }
 @media screen and (min-width: 768px) {
   .footer-items {
-    width: 80%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
   }
 }
 .footer-items-link {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 65%;
+  align-items: center;
+  padding-bottom: 0.5em;
   color: #fff;
-}
-@media screen and (min-width: 768px) {
-  .footer-items-link {
-    width: 30%;
-  }
 }
 .footer-items-link i {
   font-size: 0.9rem;
-  flex: 0.4;
+  flex: 0.1;
 }
 .footer-items-link p {
-  font-size: 1.1rem;
-  flex: 2;
+  flex: 1;
+}
+@media screen and (min-width: 768px) {
+  .footer-items-link {
+    width: 50%;
+  }
+  .footer-items-link:first-child {
+    order: -1;
+  }
+  .footer-items-link:nth-child(2) {
+    order: 4;
+  }
+  .footer-items-link:last-child {
+    order: 6;
+  }
 }
 
 .picture {
@@ -492,6 +504,17 @@ button {
   width: 100%;
   margin-top: 2.5em;
 }
+@media screen and (min-width: 768px) {
+  .card-title {
+    padding-left: 2.6em;
+    margin-top: 3.5em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card-title {
+    padding-left: 11.6em;
+  }
+}
 .card-title h1 {
   font-family: "Shrikhand", cursive;
   font-size: 1.7rem;
@@ -504,13 +527,34 @@ button {
   }
 }
 .card-title .favorites {
-  margin-right: 20px;
+  margin-right: 1.5em;
+}
+@media screen and (min-width: 768px) {
+  .card-title .favorites {
+    margin-right: 7em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card-title .favorites {
+    margin-right: 26em;
+  }
 }
 .card-menu {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 2em;
+}
+@media screen and (min-width: 768px) {
+  .card-menu {
+    padding: 0 3em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card-menu {
+    padding: 0 12em;
+    margin: 2em 0;
+  }
 }
 .card-btn {
   width: 45%;
@@ -557,7 +601,7 @@ button {
 .menu-items-choice--text {
   width: 245px;
   padding: 0 0.7em;
-  transition: all 0.3s ease-in-out;
+  white-space: nowrap;
 }
 .menu-items-choice--text h3 {
   font-size: 1.1rem;
@@ -567,11 +611,21 @@ button {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@media screen and (min-width: 768px) {
+  .menu-items-choice--text h3 {
+    overflow: visible;
+  }
+}
 .menu-items-choice--text p {
   font-size: 0.9rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+@media screen and (min-width: 768px) {
+  .menu-items-choice--text p {
+    overflow: visible;
+  }
 }
 .menu-items-choice--price {
   margin: 0 1.5em;
@@ -580,6 +634,11 @@ button {
   padding-bottom: 10px;
   transition: all 0.4s ease-in-out;
 }
+@media screen and (min-width: 1024px) {
+  .menu-items-choice--price {
+    margin-right: 2.5em;
+  }
+}
 .menu-items-choice--check {
   display: flex;
   justify-content: center;
@@ -587,12 +646,18 @@ button {
   width: 60px;
   height: 100%;
   position: absolute;
-  right: -62px;
+  right: -60px;
   color: #fff;
   font-size: 1.3rem;
   background-color: #99e2d0;
   border-radius: 0 15px 15px 0;
   transition: all 0.4s ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  .menu-items-choice--check {
+    width: 120px;
+    right: -120px;
+  }
 }
 .menu-items-choice:hover .menu-items-choice--text {
   width: 200px;
@@ -600,8 +665,18 @@ button {
 .menu-items-choice:hover .menu-items-choice--price {
   transform: translateX(-60px);
 }
+@media screen and (min-width: 768px) {
+  .menu-items-choice:hover .menu-items-choice--price {
+    transform: translateX(-180px);
+  }
+}
 .menu-items-choice:hover .menu-items-choice--check {
   transform: translateX(-60px);
+}
+@media screen and (min-width: 768px) {
+  .menu-items-choice:hover .menu-items-choice--check {
+    transform: translateX(-120px);
+  }
 }
 @keyframes slideUp {
   from {
