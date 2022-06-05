@@ -15,7 +15,6 @@
   @include flex-column;
   gap: 2em;
   width: 100%;
-  max-height: max-content;
   margin-top: -40px;
   background-color: $light-grey;
   border-radius: 40px 40px 0 0;
@@ -51,7 +50,7 @@
   }
   &-menu {
     @include flex-column;
-    justify-content: space-between;
+    // justify-content: space-between;
     gap: 2em;
 
     // responsive

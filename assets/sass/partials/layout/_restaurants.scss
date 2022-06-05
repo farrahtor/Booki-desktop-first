@@ -9,7 +9,7 @@
   }
   @include break-point(desktop) {
     height: 700px;
-    padding-top: 3em;
+    // padding-top: 3em;
   }
   &-title {
     @include title;
