@@ -1,13 +1,12 @@
 .fonctionary {
   @include flex-column;
-  margin: 3em 1em;
+  margin: 2.5em 1em;
   &-title {
     @include title;
     padding-bottom: 1em;
   }
   // responsive
   @include break-point(tablet) {
-    align-items: center;
     margin: 4em;
   }
   &-cards {
@@ -38,6 +37,9 @@
     &:hover {
       background-color: lighten($color-primary, 35);
     }
+    &:hover i {
+      color: $color-primary;
+    }
   }
   &-nbr {
     @include flex-center;
@@ -52,14 +54,14 @@
   }
   &-text {
     @include flex-row;
-    padding: 1.3em 2em;
+    padding: 1.7em 2em;
     white-space: nowrap;
     // Responsive
     @include break-point(desktop) {
       padding: 1.5em;
     }
     & i {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       padding-right: 1.5em;
       color: #818181;
       // Responsive

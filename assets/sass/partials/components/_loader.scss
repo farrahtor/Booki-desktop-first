@@ -1,11 +1,12 @@
 .section-loader {
-  @include flex-center;
+  @include flex-row;
+  align-items: center;
   @include title;
   width: 100vw;
   height: 100vh;
   background-color: rgba(255, 255, 255, 0.9);
   position: fixed;
-
+  z-index: 10;
   animation: loader 2.5s ease-in-out both;
 }
 .loader {

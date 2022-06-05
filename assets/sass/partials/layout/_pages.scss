@@ -13,7 +13,7 @@
 }
 .card {
   @include flex-column;
-  gap: 2em;
+  gap: 2.5em;
   width: 100%;
   margin-top: -40px;
   background-color: $light-grey;
@@ -39,6 +39,7 @@
     }
     & .favorites {
       margin-right: 1.5em;
+
       // responsive
       @include break-point(tablet) {
         margin-right: 7em;
@@ -50,8 +51,7 @@
   }
   &-menu {
     @include flex-column;
-    // justify-content: space-between;
-    gap: 2em;
+    gap: 2.5em;
 
     // responsive
     @include break-point(tablet) {
@@ -63,8 +63,11 @@
     }
   }
   &-btn {
-    width: 45%;
-    height: 80px;
+    width: 50%;
+    margin-bottom: 4em;
+    @include break-point(desktop) {
+      width: 20%;
+    }
   }
 }
 
@@ -133,11 +136,12 @@
       font-weight: 700;
       align-self: flex-end;
       padding-bottom: 10px;
+      transition: all 0.4s ease-in-out;
+
       // responsive
       @include break-point(desktop) {
         margin-right: 2.5em;
       }
-      transition: all 0.4s ease-in-out;
     }
     &--check {
       @include flex-center;
@@ -149,13 +153,13 @@
       font-size: 1.3rem;
       background-color: $color-tertiary;
       border-radius: 0 15px 15px 0;
+      transition: all 0.4s ease-in-out;
+
       // responsive
       @include break-point(tablet) {
         width: 120px;
         right: -120px;
       }
-
-      transition: all 0.4s ease-in-out;
     }
     &:hover &--text {
       width: 200px;
