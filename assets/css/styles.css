@@ -122,7 +122,7 @@ button {
 
 .section-loader {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
   font-size: 1.6rem;
   font-weight: 900;
@@ -690,7 +690,6 @@ button {
 .menu-items-choice--text {
   width: 245px;
   padding: 0 0.7em;
-  white-space: nowrap;
 }
 .menu-items-choice--text h3 {
   font-size: 1.1rem;

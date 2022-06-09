@@ -1,6 +1,5 @@
 .section-loader {
-  @include flex-row;
-  align-items: center;
+  @include flex-center;
   @include title;
   width: 100vw;
   height: 100vh;
