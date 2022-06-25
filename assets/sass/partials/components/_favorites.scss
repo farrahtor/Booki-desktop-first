@@ -9,8 +9,8 @@
     &_filled {
       opacity: 0;
       background: $degraded;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
       &:hover {
         opacity: 1;
         transform: scale(1.1);

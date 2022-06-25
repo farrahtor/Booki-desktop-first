@@ -111,8 +111,6 @@ button {
 .favorites-heart_filled {
   opacity: 0;
   background: linear-gradient(to left top, #9356dc, #ff79da);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .favorites-heart_filled:hover {
   opacity: 1;
@@ -778,7 +776,7 @@ button {
 }
 
 body {
-  font-family: "Roboto", sans empattement;
+  font-family: "Roboto", "sans empattement";
 }
 
 #container,
